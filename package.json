@@ -1,0 +1,19 @@
+{
+  "name": "popular-products-generator",
+  "version": "1.0.0",
+  "description": "Code challenge at Bunnings",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.10.0"
+  },
+  "repository": "https://github.com/isaacloft/popular-products-generator.git",
+  "author": "isaac guan",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": false,
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
