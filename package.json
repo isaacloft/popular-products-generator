@@ -1,6 +1,7 @@
 {
   "name": "popular-products-generator",
   "version": "1.0.0",
+  "type": "module",
   "description": "Code challenge at Bunnings",
   "main": "index.js",
   "engines": {
@@ -10,10 +11,14 @@
   "author": "isaac guan",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --experimental-json-modules index.js",
+    "test": "jest"
   },
   "private": false,
   "devDependencies": {
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
