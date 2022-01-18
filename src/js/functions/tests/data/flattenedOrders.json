@@ -1,0 +1,107 @@
+[
+  {
+    "quantity": 1,
+    "productId": "P1",
+    "date": "19/07/2021",
+    "customerId": "C1",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 1,
+    "productId": "P1",
+    "date": "19/07/2021",
+    "customerId": "C2",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 1,
+    "productId": "P2",
+    "date": "19/07/2021",
+    "customerId": "C2",
+    "productName": "Aandleford Black Seaford Post Mounted Letterbox"
+  },
+  {
+    "quantity": 1,
+    "productId": "P2",
+    "date": "19/07/2021",
+    "customerId": "C3",
+    "productName": "Aandleford Black Seaford Post Mounted Letterbox"
+  },
+  {
+    "quantity": 2,
+    "productId": "P1",
+    "date": "19/07/2021",
+    "customerId": "C3",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 1,
+    "productId": "P2",
+    "date": "19/07/2021",
+    "customerId": "C32",
+    "productName": "Aandleford Black Seaford Post Mounted Letterbox"
+  },
+  {
+    "quantity": 2,
+    "productId": "P4",
+    "date": "20/07/2021",
+    "customerId": "C3",
+    "productName": "Ozito 80W Soldering Iron"
+  },
+  {
+    "quantity": 2,
+    "productId": "P4",
+    "date": "20/07/2021",
+    "customerId": "C3",
+    "productName": "Ozito 80W Soldering Iron"
+  },
+  {
+    "quantity": 2,
+    "productId": "P1",
+    "date": "20/07/2021",
+    "customerId": "C3",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 2,
+    "productId": "P5",
+    "date": "20/07/2021",
+    "customerId": "C4",
+    "productName": "Richgro 25L All Purpose Garden Soil Mix"
+  },
+  {
+    "quantity": 2,
+    "productId": "P1",
+    "date": "20/07/2021",
+    "customerId": "C5",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 10,
+    "productId": "P1",
+    "date": "20/07/2021",
+    "customerId": "C5",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 1,
+    "productId": "P1",
+    "date": "21/07/2021",
+    "customerId": "C5",
+    "productName": "Ezy Storage 37L Flexi Laundry Basket - White"
+  },
+  {
+    "quantity": 1,
+    "productId": "P4",
+    "date": "21/07/2021",
+    "customerId": "C3",
+    "productName": "Ozito 80W Soldering Iron"
+  },
+  {
+    "quantity": 3,
+    "productId": "P6",
+    "date": "21/07/2021",
+    "customerId": "C3",
+    "productName": "Arlec 160W Crystalline Solar Foldable Charging Kit"
+  }
+]
