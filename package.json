@@ -7,12 +7,19 @@
   "engines": {
     "node": ">=16.10.0"
   },
+  "env": {
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
+      ]
+    }
+  },
   "repository": "https://github.com/isaacloft/popular-products-generator.git",
   "author": "isaac guan",
   "license": "MIT",
   "scripts": {
     "start": "node --experimental-json-modules index.js",
-    "test": "jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
   },
   "private": false,
   "devDependencies": {

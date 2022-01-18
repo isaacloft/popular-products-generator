@@ -14,12 +14,16 @@ const getOrdersByDate = (originalOrders, productObject) => {
 };
 
 /**
- * @description flatten the original order array
+ * @description flatten the original order array and only keep completed orders
  * @param {array} originalOrders example orders json
  * @param {array} productObject example products json
  * @returns Array of order objects
  */
-const flattenOrders = (originalOrders, productObject) => {
+const flattenOrders = (originalOrders = [], productObject = []) => {
+  if (!Array.isArray(originalOrders) || !Array.isArray(productObject)) {
+    return undefined;
+  }
+
   let flattenedOrders = [];
   originalOrders.forEach((order) => {
     if (order.status === 'completed') {
@@ -41,7 +45,11 @@ const flattenOrders = (originalOrders, productObject) => {
  * @param {array} orders
  * @returns valid orders
  */
-const validateOrders = (orders) => {
+const validateOrders = (orders = []) => {
+  if (!Array.isArray(orders)) {
+    return undefined;
+  }
+
   const groupedOrders = _.groupBy(orders, (order) => `${order.productId}|${order.date}|${order.customerId}`);
   const cleanedOrders = [];
   for (const key in groupedOrders) {
@@ -55,12 +63,12 @@ const validateOrders = (orders) => {
 
 /**
  * @description For each date in dates array, find out the best seller of that date
- * @param {array} orders flattened and valid array of orders, ordered by date
+ * @param {object} orders flattened and valid array of orders, ordered by date
  * @param {array} dates array of date in string
  * @returns array of best sellers
  */
 const pickBestSellerOfDate = (orders = [], dates = []) => {
-  if (orders.length === 0 || dates.length < 1) return undefined;
+  if (typeof orders !== 'object' || !Array.isArray(dates) || orders.length < 1 || dates.length < 1) return undefined;
 
   const sorted = [];
 
@@ -77,14 +85,16 @@ const pickBestSellerOfDate = (orders = [], dates = []) => {
 
 /**
  * @description find out the best selling product over provided days
- * @param {array} orders flattened and valid array of orders, ordered by date
+ * @param {object} orders flattened and valid array of orders, ordered by date
  * @param {number} numberOfDays N number of days used to find out the best seller
  * @returns sorted array of best sellers of given days
  */
-const pickBestSellerOverPeriod = (orders = [], numberOfDays = 2) => {
-  if (numberOfDays < 2) {
+const pickBestSellerOverPeriod = (orders = {}, numberOfDays = 2) => {
+  if (!typeof orders === 'object' || Object.keys(orders).length === 0 || numberOfDays < 2) {
     console.warn(`** Warning: Period has to be at least two days **`);
-    return [];
+    console.warn(`** Warning: Orders needs to be in array format **`);
+
+    return undefined;
   }
 
   const arrayOfOrderDates = [TODAY];
@@ -120,4 +130,4 @@ const pickBestSellerOverPeriod = (orders = [], numberOfDays = 2) => {
   return sortableResult;
 };
 
-export { getOrdersByDate, pickBestSellerOfDate, pickBestSellerOverPeriod };
+export { flattenOrders, validateOrders, getOrdersByDate, pickBestSellerOfDate, pickBestSellerOverPeriod };

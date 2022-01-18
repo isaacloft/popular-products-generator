@@ -1,4 +1,5 @@
 import main from './src/js/index.js';
 
+console.info('\nStart....\n');
 main();
-console.log('Index.js');
+console.info('\nEnd....\n');

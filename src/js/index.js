@@ -1,6 +1,6 @@
 import orderObject from '../../inputs/orders.json';
 import productObject from '../../inputs/products.json';
-import { getOrdersByDate, pickBestSellerOfDate, pickBestSellerOverPeriod } from '../js/fucntions/productSelector.js';
+import { getOrdersByDate, pickBestSellerOfDate, pickBestSellerOverPeriod } from '../js/functions/productSelector.js';
 
 export default () => {
   const DATES = ['19/07/2021', '20/07/2021', '21/07/2021'];
